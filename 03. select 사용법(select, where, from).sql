@@ -82,3 +82,11 @@ select mem_name, addr from member where addr = '경기' or addr = '전남' or ad
 select mem_name, addr from member where addr in('경기', '전남', '경남');
 -- 문자열의 일부 글자를 검색 / 이르므이 첫글자가 우로 시작하는 회원 검색 / 우 뒤에는 무엇이든(%) 허용한다.
 select * from member where mem_name like '우%';
+select * from member where mem_name like '%핑크';
+-- 한 글자와 매칭하기 위해서는 언더바(_)를 사용한다.
+select * from member where mem_name like '__핑크'; -- 언더바가 두개이므로 앞 두 글자는 상관없고 뒤는 핑크인 회원을 검색한다.
+
+# 서브쿼리
+-- select 안에는 또다른 select가 들어갈 수 있다. 이것을 서브쿼리라고 부른다.
+-- ex) 이름이 에이핑크인 회원의 평균 키보다 큰 회원을 검색해보자
+select mem_name, height from member where height > (select height from member where mem_name = '에이핑크');
