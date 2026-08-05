@@ -18,7 +18,7 @@ select 열_이름
     limit 숫자
 */
 
-# order by 절은 결과의 값이나 개수에 대해서는 영향을 미치지는 않지만, 결과가 출려고디는 순서를 조절한다.
+# order by 절은 결과의 값이나 개수에 대해서는 영향을 미치지는 않지만, 결과가 출력되는 순서를 조절한다.
 -- 데뷔일자가 빠른 순서대로 출력해보자
 select mem_id, mem_name, debut_date from member order by debut_date;
 -- 데뷔일자가 늦은 순서대로 정렬해보자
