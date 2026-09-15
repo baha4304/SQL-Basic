@@ -1,0 +1,8 @@
+# sql과   파이썬 연결
+-- 일반 사용자도 마우스 클릭으로 mysql을 편리하게 사용할 수 있게 해준다.
+-- 파이썬에는 mysql을 인식하는 기능이 없으므로 PyMySQL이라는 외부 라이브러리도 설치해야한다.
+
+# 파이썬과 MySQL의 연동
+drop database if exists soloDB;
+create database soloDB;
+-- soloDB를 생성한 후에는 더 이상 mysql 워크벤치를 사용하지 않는다. 
